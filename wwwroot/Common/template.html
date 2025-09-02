@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Query Plan Visualizer</title>
+    <link rel="stylesheet" href="highlight.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="highlight.dark.min.css">
+    <script type="text/javascript" src="highlight.min.js"></script>
+    <script type="text/javascript" src="highlight.sql.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: black;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: black;
+                --text-color: white;
+            }
+        }
+
+        .hljs-keyword {
+            color: #800;
+            text-transform: uppercase;
+        }
+
+        .hljs-built_in {
+            text-transform: uppercase;
+        }
+
+        body {
+            background: var(--bg-color);
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2, pre {
+            color: var(--text-color);
+        }
+
+        .query-box {
+            background: var(--bg-color);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <h2>SQL Query</h2>
+    <div class='query-box'>
+        <pre><code class="language-sql">{query}</code></pre>
+    </div>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+</html>

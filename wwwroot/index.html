@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link type="text/css" media="all" rel="stylesheet" href="/SqlServer/qp.css" />
+    <link rel="stylesheet" href="/Common/highlight.css">
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="../Common/highlight.dark.min.css">
+    <!-- Add highlight.js core and SQL language -->
+    <script type="text/javascript" src="/SqlServer/qp.min.js"></script>
+    <script type="text/javascript" src="/Common/highlight.min.js"></script>
+    <script type="text/javascript" src="/Common/highlight.sql.js"></script>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: black;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: black;
+                --text-color: white;
+            }
+        }
+
+        .hljs-keyword {
+            color: #800;
+            text-transform: uppercase;
+        }
+
+        .hljs-built_in {
+            text-transform: uppercase;
+        }
+
+        .qp-statement-header {
+            color: var(--text-color);
+        }
+
+        body {
+            background: var(--bg-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="/query" method="post"  enctype="multipart/form-data">
+            <textarea name="content" rows="30" cols="100"></textarea>
+            <br/>
+            <button type="submit">执行sql查询</button>
+        </form>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
